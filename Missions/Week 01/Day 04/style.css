@@ -1,7 +1,7 @@
 h1 {
     font-size: 90px;
 }
-
+/* I wish this used the same syntax as HTML for consistency */
 h3 {
     border: solid 2px purple;
     font-size: 30px;
