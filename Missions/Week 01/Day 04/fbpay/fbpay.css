@@ -1,21 +1,31 @@
+body {
+    /* background-color: #636363; */
+    font-family: "Tahoma";
+}
+
 main {
     display: flex;
-    background-color: lightblue;
     align-items: center;
     margin: 150px 100px;
 
 }
 
-body {
-    font-family: "Tahoma";
+/* Core Elements */
+h1 {
+    font-size: 40px;
 }
 
-#left {
-    display: flex;
+p {
+    margin: 35px 0px;
+}
+
+#right {
     background-color: pink;
-    margin: 30px 100px 30px 100px;
+    width: 55%;
+    text-align: right;
 }
 
+/* Navbar Styling */
 nav > ul {
     display: flex;
     justify-content: flex-end;
@@ -24,12 +34,35 @@ nav > ul {
 
 .btn {
     background-color: #d8e4ef;
+    border-radius: 25px;
     text-align: center;
     font-size: 16px;
+}
+
+.chat-btn {
+    display: block;
+    margin: 20px 0px;
+    width: 200px;
+    border-radius: 0px;
+    padding: 14px 25px;
+    font-family: inherit;
+    font-weight: 700;
+    border: none;
 }
 
 .nav-link {
     list-style: none;
     margin: 2px 5px;
     padding: 8px 15px;
+}
+
+.nav-link:hover {
+    background-color: #396ee1;
+    color: white;
+    cursor: pointer;
+}
+
+.nav-link:active {
+    background-color: #011f60;
+    color: white;
 }
