@@ -1,7 +1,17 @@
+main {
+    display: flex;
+    background-color: lightblue;
+    align-items: center;
+    margin: 150px 100px;
+
+}
+
 body {
     font-family: "Tahoma";
 }
 
 #left {
     display: flex;
+    background-color: pink;
+    margin: 30px 100px 30px 100px;
 }
