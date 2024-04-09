@@ -19,10 +19,18 @@ p {
     margin: 35px 0px;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 #right {
-    background-color: pink;
-    width: 55%;
-    text-align: right;
+    background-image: url('https://flipweb.org/wp-content/uploads/2019/11/Facebook-Pay.png');
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    width: 75%;
 }
 
 /* Navbar Styling */
@@ -63,6 +71,17 @@ nav > ul {
 }
 
 .nav-link:active {
+    background-color: #011f60;
+    color: white;
+}
+
+.chat-btn:hover {
+    background-color: #396ee1;
+    color: white;
+    cursor: pointer;
+}
+
+.chat-btn:active {
     background-color: #011f60;
     color: white;
 }
