@@ -20,3 +20,18 @@ input[type=submit], input[type=reset] {
     color: white;
     width: 5.5%;
 }
+
+div{
+    width: 11%;
+    padding: 5px 5px;
+    height: 80px;
+    overflow: auto;
+    background-color: purple;
+    color: white;
+    transition: width 2s, height 2s, background-color 2s, transform 2s;
+}
+
+div:hover {
+    width: 11%;
+    height: 150px;
+}
