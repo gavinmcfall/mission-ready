@@ -26,12 +26,35 @@ div{
     padding: 5px 5px;
     height: 80px;
     overflow: auto;
-    background-color: purple;
+    background-color: red;
     color: white;
-    transition: width 2s, height 2s, background-color 2s, transform 2s;
+    /* transition: width 2s, height 2s, background-color 2s, transform 2s; */
+    animation: rainbow 16s infinite, reverseRainbow 16s infinite;
 }
 
 div:hover {
     width: 11%;
     height: 150px;
 }
+
+@keyframes rainbow {
+    0% { background-color: #FF0000; } /* Red */
+    14.28% { background-color: #FFA500; } /* Orange */
+    28.57% { background-color: #FFFF00; } /* Yellow */
+    42.85% { background-color: #008000; } /* Green */
+    57.14% { background-color: #0000FF; } /* Blue */
+    71.42% { background-color: #4B0082; } /* Indigo */
+    85.71% { background-color: #EE82EE; } /* Violet */
+    100% { background-color: #FF0000; } /* Back to Red */
+  }
+  
+  @keyframes reverseRainbow {
+    0% { background-color: #FF0000; } /* Red */
+    14.28% { background-color: #EE82EE; } /* Violet */
+    28.57% { background-color: #4B0082; } /* Indigo */
+    42.85% { background-color: #0000FF; } /* Blue */
+    57.14% { background-color: #008000; } /* Green */
+    71.42% { background-color: #FFFF00; } /* Yellow */
+    85.71% { background-color: #FFA500; } /* Orange */
+    100% { background-color: #FF0000; } /* Back to Red */
+  }
