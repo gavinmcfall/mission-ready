@@ -1,0 +1,22 @@
+input[type=text], input[type=email] {
+    padding: 2px 2px;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 2px solid purple;
+    width: 9%;
+}
+
+input[type=radio] + label {
+    color: purple;
+}
+
+textarea {
+    border: 2px solid purple;
+    width: 11%;
+}
+
+input[type=submit], input[type=reset] {
+    background-color: purple;
+    color: white;
+    width: 5.5%;
+}
