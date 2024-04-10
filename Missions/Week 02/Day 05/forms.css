@@ -22,9 +22,9 @@ input[type=submit], input[type=reset] {
 }
 
 div{
-    width: 11%;
+    width: 15%;
     padding: 5px 5px;
-    height: 80px;
+    height: 180px;
     overflow: auto;
     background-color: red;
     color: white;
@@ -32,10 +32,10 @@ div{
     animation: rainbow 16s infinite, reverseRainbow 16s infinite;
 }
 
-div:hover {
+/* div:hover {
     width: 11%;
     height: 150px;
-}
+} */
 
 @keyframes rainbow {
     0% { background-color: #FF0000; } /* Red */
