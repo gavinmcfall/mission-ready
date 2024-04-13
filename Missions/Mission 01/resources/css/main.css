@@ -38,13 +38,51 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: blue;
-    align-items: bottom;
-    padding-top: 60px;
+    padding-top: 100px;
 }
 
-.social {
-    width: 50px;
+
+.social-icon {
+    width: 50px; /* Set the width and height of the container */
     height: 50px;
-    padding: 0px 10px;
+    background-size: cover; /* Ensure the background image covers the container */
+}
+
+.linkedin {
+    position: absolute;
+    bottom: 10px;
+    right: 53%;
+    background-image: url('../images/linkedin.png'); /* Set the default image */
+}
+
+.linkedin:hover {
+    width: 200px;
+    opacity: 1;
+    background-image: url('../images/linkedin_expanded.png'); /* Set the hover image */
+}
+
+.mail {
+    position: absolute;
+    bottom: 10px;
+    background-image: url('../images/mail.png'); /* Set the default image */
+}
+
+.mail:hover {
+    width: 200px;
+    height: 100px;
+    opacity: 1;
+    background-image: url('../images/mail_expanded.png'); /* Set the hover image */
+}
+
+.github {
+    position: absolute;
+    bottom: 10px;
+    left: 53%;
+    background-image: url('../images/github.png'); /* Set the default image */
+}
+
+.github:hover {
+    width: 200px;
+    opacity: 1;
+    background-image: url('../images/github_expanded.png'); /* Set the hover image */
 }
