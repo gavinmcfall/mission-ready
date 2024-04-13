@@ -1,3 +1,7 @@
+/* -------------------------- */
+/*       Core Structure       */
+/* -------------------------- */
+
 body {
     background-color: #1a1e21;
     margin: 0;
@@ -9,22 +13,57 @@ body {
     height: 100vh; /* 100% of the screen */
 }
 
-.top {
-    display: flex;
-    font-size: 100px;
-    font-family: verdana;
-    font-weight: 700;
-    color: #bebebe;
-}
-
 .top, .bottom {
     padding: 20px;
 }
+
+/* ----------------------- */
+/*       Top Section       */
+/* ----------------------- */
+
+.top {
+    display: flex;
+    height: 10%; /* 10% of the screen */
+    gap: 10px; /* space between the two middle sections */
+}
+
+.name, .nav {
+    flex: 1; /* 50:50 Split */
+    padding: 20px;
+}
+
+.name {
+    display: flex;
+    text-align: left;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 100px;
+    align-items: center;
+    color: #bebebe;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row-reverse;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 30px;
+    align-items: center;
+    color: #bebebe;
+}
+
+.nav-buttons {
+    padding-right: 25px;
+}
+/* -------------------------- */
+/*       Middle Section       */
+/* -------------------------- */
 
 .middle {
     display: flex;
     flex: 1; /* take up remaining space */
     gap: 10px; /* space between the two middle sections */
+    padding: 20px;
 }
 
 .left, .right {
@@ -41,27 +80,36 @@ body {
     background-color: #FF0000;
 }
 
-.bottom {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 100px;
-}
-
 h1 {
     padding-top: 100px;
     font-size: 40px;
     font-family: verdana;
     font-weight: 700;
     color: #bebebe;
+    padding: 20px;
+}
+
+ul {
+    padding-left: 60px;
 }
 
 .details {
     font-size: 20px;
-    padding: 10px;
+    padding: 20px;
     font-family: verdana;
     font-weight: 400;
     color: #bebebe;
+}
+
+/* -------------------------- */
+/*       Bottom Section       */
+/* -------------------------- */
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 100px;
 }
 
 .social-icon {
