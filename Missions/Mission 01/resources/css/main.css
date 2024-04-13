@@ -1,0 +1,50 @@
+body {
+    background-color: #333333;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 100% of the screen */
+}
+
+.top {
+    display: flex;
+    font-size: 60px;
+    font-family: verdana;
+    font-weight: 700;
+    color: #bebebe;
+}
+
+.top, .bottom {
+    padding: 20px;
+}
+
+.middle {
+    display: flex;
+    flex: 1; /* take up remaining space */
+    gap: 10px; /* space between the two middle sections */
+}
+
+.left, .right {
+    flex: 1; /* 50:50 Split */
+    background-color: #FF0000;
+    padding: 20px;
+    text-align: center;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: blue;
+    align-items: bottom;
+    padding-top: 60px;
+}
+
+.social {
+    width: 50px;
+    height: 50px;
+    padding: 0px 10px;
+}
