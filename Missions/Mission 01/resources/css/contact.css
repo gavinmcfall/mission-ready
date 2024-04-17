@@ -25,6 +25,7 @@ body {
     display: flex;
     height: 10%; /* 10% of the screen */
     gap: 10px; /* space between the two middle sections */
+    height: 10vh;
 }
 
 .name, .nav {
@@ -61,7 +62,6 @@ body {
 /* -------------------------- */
 
 .middle {
-    background-color: blue;
     display: flex;
     flex-wrap: wrap;
     width: calc(100% - 40px);
@@ -100,7 +100,6 @@ ul {
 }
 
 .contact-labels {
-    background-color: pink;
     display: flex;
     width: calc(5% - 20px);
     height: 140px;
@@ -108,22 +107,27 @@ ul {
 }
 
 .contact-entry {
-    background-color: lightblue;
     display: flex;
     width: calc(95%);
     height: 140px;
 }
 
-.form-entry {
-    background-color: lightgreen;
-    display: flex;
-    flex-grow: 1;
-    width: calc(100%);
-}
 
 /* ------------------------ */
 /*       Form Section       */
 /* ------------------------ */
+
+.form-entry {
+    /* height: max-content; */
+    width: calc(100%-40px);
+    padding: 20px;
+}
+
+.submit {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 
 .contact-labels {
     display: flex;
@@ -148,10 +152,19 @@ label {
     /* border-bottom: 2px solid #bebebe; */
 }
 
+.reason {
+    color: #bebebe;
+}
+
+.message {
+    color: #bebebe;
+}
+
 input[type=text], input[type=email], input[type=company] {
     border: none;
     border-bottom: 2px solid #bebebe;
     margin-bottom: 20px;
+    width: 300px;
 }
 
 input[type=text] {
@@ -163,11 +176,12 @@ input[type=text] {
 /* -------------------------- */
 
 .bottom {
-    background-color: #FF0000;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
     padding-top: 125px;
+    height: 100px;
 }
 
 .social-icon {
@@ -177,25 +191,29 @@ input[type=text] {
 }
 
 .linkedin {
+    align-items: flex-end;
     position: absolute;
-    bottom: 10px;
-    right: 53%;
+    bottom: calc(0%-130px);
+    right: calc(50% + 50px);
     background-image: url('../images/linkedin.png'); /* Set the default image */
 }
 
 .linkedin:hover {
-    width: 200px;
+    width: 205px;
     opacity: 1;
     background-image: url('../images/linkedin_expanded.png'); /* Set the hover image */
 }
 
 .mail {
+    align-items: flex-end;
     position: absolute;
-    bottom: 10px;
+    bottom: calc(0%-130px);
     background-image: url('../images/mail.png'); /* Set the default image */
 }
 
 .mail:hover {
+    align-items: flex-end;
+    position: absolute;
     width: 200px;
     height: 100px;
     opacity: 1;
@@ -203,9 +221,10 @@ input[type=text] {
 }
 
 .github {
+    align-items: flex-end;
     position: absolute;
-    bottom: 10px;
-    left: 53%;
+    left: calc(50% + 50px);
+    bottom: calc(0%-130px);
     background-image: url('../images/github.png'); /* Set the default image */
 }
 
