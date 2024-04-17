@@ -13,10 +13,6 @@ body {
     height: 100vh; /* 100% of the screen */
 }
 
-/* .top {
-    padding: 20px;
-} */
-
 /* ----------------------- */
 /*       Top Section       */
 /* ----------------------- */
@@ -50,6 +46,11 @@ body {
     font-weight: 700;
     font-size: 30px;
     align-items: center;
+    color: #bebebe;
+}
+
+.nav > p > a {
+    text-decoration: none;
     color: #bebebe;
 }
 
@@ -128,6 +129,9 @@ ul {
     padding-bottom: 10px;
 }
 
+#name::placeholder, #email::placeholder, #company::placeholder {
+    font-style: italic;
+}
 
 .contact-labels {
     display: flex;

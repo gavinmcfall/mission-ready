@@ -13,10 +13,6 @@ body {
     height: 100vh; /* 100% of the screen */
 }
 
-.top, .bottom {
-    padding: 20px;
-}
-
 /* ----------------------- */
 /*       Top Section       */
 /* ----------------------- */
@@ -25,6 +21,7 @@ body {
     display: flex;
     height: 10%; /* 10% of the screen */
     gap: 10px; /* space between the two middle sections */
+    height: 10vh;
 }
 
 .name, .nav {
@@ -39,6 +36,11 @@ body {
     font-weight: 700;
     font-size: 100px;
     align-items: center;
+    color: #bebebe;
+}
+
+.nav > p > a {
+    text-decoration: none;
     color: #bebebe;
 }
 
@@ -69,16 +71,26 @@ body {
 
 .left, .right {
     flex: 1; /* 50:50 Split */
-    padding: 20px;
     text-align: center;
 }
 
 .left {
     text-align: left;
+    padding-right: 20px;
 }
 
 .right {
-    background-color: #FF0000;
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: flex-end; /* Aligns children to the bottom of the container */
+    align-items: center; /* Centers children horizontally */
+    padding-left: 20px;
+}
+
+.me {
+    display: flex;
+    width: 95%;
+    height: 95%;
 }
 
 h1 {
@@ -111,15 +123,88 @@ ul {
     display: flex;
 }
 
+.contact-labels {
+    display: flex;
+    width: calc(5% - 20px);
+    height: 140px;
+    color: #bebebe;
+}
+
+.contact-entry {
+    display: flex;
+    width: calc(95%);
+    height: 140px;
+}
+
+
+/* ------------------------ */
+/*       Form Section       */
+/* ------------------------ */
+
+.form-entry {
+    width: calc(100%-40px);
+    padding: 20px;
+}
+
+.submit {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.contact-labels {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    border: none;
+    border-bottom: 2px solid #bebebe;
+    margin-bottom: 20px;
+}
+
+.contact-entry {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    /* border-bottom: 2px solid #bebebe; */
+}
+
+.reason {
+    color: #bebebe;
+}
+
+.message {
+    color: #bebebe;
+}
+
+input[type=text], input[type=email], input[type=company] {
+    border: none;
+    border-bottom: 2px solid #bebebe;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+input[type=text] {
+    margin-top: 1.2px;
+}
+
 /* -------------------------- */
 /*       Bottom Section       */
 /* -------------------------- */
 
 .bottom {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 100px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 125px;
+    height: 100px;
 }
 
 .social-icon {
@@ -129,25 +214,29 @@ ul {
 }
 
 .linkedin {
+    align-items: flex-end;
     position: absolute;
-    bottom: 10px;
-    right: 53%;
+    bottom: calc(0%-130px);
+    right: calc(50% + 50px);
     background-image: url('../images/linkedin.png'); /* Set the default image */
 }
 
 .linkedin:hover {
-    width: 200px;
+    width: 205px;
     opacity: 1;
     background-image: url('../images/linkedin_expanded.png'); /* Set the hover image */
 }
 
 .mail {
+    align-items: flex-end;
     position: absolute;
-    bottom: 10px;
+    bottom: calc(0%-130px);
     background-image: url('../images/mail.png'); /* Set the default image */
 }
 
 .mail:hover {
+    align-items: flex-end;
+    position: absolute;
     width: 200px;
     height: 100px;
     opacity: 1;
@@ -155,9 +244,10 @@ ul {
 }
 
 .github {
+    align-items: flex-end;
     position: absolute;
-    bottom: 10px;
-    left: 53%;
+    left: calc(50% + 50px);
+    bottom: calc(0%-130px);
     background-image: url('../images/github.png'); /* Set the default image */
 }
 
