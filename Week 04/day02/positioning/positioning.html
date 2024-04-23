@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Positioning</title>
+
+    <style>
+        .parent {
+            background-color: cornsilk;
+            border: 2px solid red;
+            height: 1000px;
+            position: relative;
+        }
+
+        .child {
+            background-color: aquamarine;
+            border: 2px solid royalblue;
+            position: absolute;
+            transform: translate(50%, 50%);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="parent">
+        Parent div
+        <div class="child">
+            Child div
+        </div>
+        Some other test underneath the child div</br>
+        And finally some more text.
+    </div>
+</body>
+</html>
