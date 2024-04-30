@@ -13,3 +13,69 @@ console.log(Boolean([])); //true, array is an object
 console.log(Boolean(null)); //false, null is a falsy value
 console.log(Boolean(NaN)); //false, NaN is a falsy value
 console.log(Boolean(undefined)); //false, undefined is a falsy value
+
+console.log(2 == 2); //true, no type checking
+console.log(2 != 2); //false, no type checking
+console.log(2 > 3); //false, no type checking
+console.log(2 < 3); //true, no type checking
+console.log(2 == 3); //false, no type checking
+console.log(2 == "2"); //true, no type checking
+console.log(2 !== "2"); //true, type checking
+console.log(2 === "2"); //false, type checking
+console.log(2 >= 2); //true, no type checking
+console.log(2 <= 2); //true, no type checking
+console.log(2 >= 3); //false, no type checking
+
+// = is an assignment operator
+// == is a comparison operator
+// === is a strict comparison operator
+// != is a not equal operator
+// !== is a strict not equal operator
+// > is a greater than operator
+// < is a less than operator
+// >= is a greater than or equal operator
+// <= is a less than or equal operator
+
+// Generally it is better to use strict comparison operators === and !==
+
+// Logical Operators
+// && is a logical AND operator
+// || is a logical OR operator
+
+const b1 = !false; //true
+const b2 = true && false; //false
+const b3 = true || false; //true
+const b4 = 123 === "456"; //false
+
+console.log("b1 = " + b1);
+console.log("b2 = " + b2);
+console.log("b3 = " + b3);
+console.log("b4 = " + b4);
+
+// Conditional Statements
+// if statement
+// else statement
+// if else statement
+
+if (1 === 1) {
+  console.log("This is true");
+}
+
+const age = 16;
+
+if (age > 16) {
+  console.log("You are old enough to drive");
+} else {
+  console.log("You are not old enough to drive");
+}
+
+//exercise
+
+const mynum = -1;
+if (mynum > 0) {
+  console.log("The number is positive");
+} else if (mynum === 0) {
+  console.log("The number is 0");
+} else {
+  console.log("The number is negative");
+}
