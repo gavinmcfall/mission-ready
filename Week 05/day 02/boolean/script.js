@@ -151,3 +151,49 @@ if (customerAge >= 65 && (hasPremiumSub || hasValidCoupon)) {
 customerAge >= 65 && (hasPremiumSub || hasValidCoupon)
   ? console.log("You get a discount")
   : console.log("You do not get a discount");
+
+//switch
+
+const fruit = "grape";
+
+switch (fruit) {
+  case "orange": //if (fruit === "orange")
+    console.log("The fruit is an orange");
+    break;
+
+  case "strawberry": //if (fruit === "strawberry")
+    console.log("The fruit is a strawberry");
+    break;
+
+  case "banana": //if (fruit === "banana")
+    console.log("The fruit is a banana");
+    break;
+
+  default:
+    console.log(fruit + ": this fruit is unknown");
+}
+
+//exercise 5
+
+let dayOfWeek = "Saturday";
+
+switch (dayOfWeek) {
+  case "Saturday":
+  case "Sunday":
+    console.log("It's a Time to relax! it's the weekend!");
+    break;
+
+  default:
+    console.log("zzz it's a work day");
+}
+
+let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+let dayIndex = days.indexOf(dayOfWeek);
+
+if (dayIndex >= 0 && dayIndex <= 4) {
+    console.log("zzz it's a work day");
+} else if (dayIndex === 5 || dayIndex === 6) {
+    console.log("It's a Time to relax! it's the weekend!");
+} else {
+    console.log("Invalid day");
+}
