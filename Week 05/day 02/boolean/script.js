@@ -79,3 +79,75 @@ if (mynum > 0) {
 } else {
   console.log("The number is negative");
 }
+
+// exercise 2
+
+const mystring = "Alphabet";
+
+if (mystring[0].toLowerCase() === "a") {
+  console.log("True");
+} else {
+  console.log("False");
+}
+
+const mystring2 = "apple";
+//Ternary Operator
+mystring2[0].toLowerCase() === "a" ? console.log("True") : console.log("False");
+
+//exercise 3
+const word = "hippopotamus";
+word.length > 20
+  ? console.log("The word is long")
+  : console.log("The word is NOT long. It is short");
+
+//&& operator aka AND operator
+
+const isSunny = true;
+const temperature = 28;
+
+if (isSunny && temperature > 25) {
+  console.log("It's a hot a sunny day!");
+} else {
+  console.log("The weather is not hot and sunny");
+}
+
+// || operator aka OR operator
+const hasPremiumSubscription = false;
+const hasFreeTrial = true;
+
+if (hasPremiumSubscription || hasFreeTrial) {
+  console.log("You have access to premoium content");
+} else {
+  console.log("Upgrade to premium subscription for full access");
+}
+
+//BEDMAS in JavaScript
+let x = 4,
+  y = 2,
+  z = 0;
+
+if ((x == 4 && !y == 1) || z == 0) {
+  console.log("The comparison value is ?");
+}
+//Evaluate y == 1 first
+//Evaluate (!y == 1) second
+//Evaluate z == 0 third
+//Evaluate (!(y == 1) || z == 0) fourth
+//Evaluate x == 4 fifth
+//Evaluate x == 4 && (!(y == 1) || z == 0) sixth
+
+//exercise 4
+
+const customerAge = 50;
+const hasPremiumSub = true;
+const hasValidCoupon = true;
+
+if (customerAge >= 65 && (hasPremiumSub || hasValidCoupon)) {
+  console.log("You get a discount");
+} else {
+  console.log("You do not get a discount");
+}
+
+customerAge >= 65 && (hasPremiumSub || hasValidCoupon)
+  ? console.log("You get a discount")
+  : console.log("You do not get a discount");
