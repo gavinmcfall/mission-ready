@@ -28,3 +28,7 @@ function changeColor() {
 
 // Call the function to create the color picker
 changeColor();
+
+const headerE1 = document.getElementById("header-id")
+headerE1.style.fontSize = "60px";
+headerE1.textContent = "Look! My text content has changed"
