@@ -67,6 +67,33 @@ body {
 }
 
 /* -------------------------- */
+/*          Counter           */
+/* -------------------------- */
+
+/* Styles for website counter container */
+.website-counter {
+  background-color: #ff4957;
+  height: 40px;
+  width: 80px;
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 25px;
+  /* margin-top: 10px; */
+  margin-right: 50px;
+  align-items: center;
+  justify-content: center;
+    display: flex;
+}
+
+.small-text {
+    font-size: 30px;
+    margin-right: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------------- */
 /*           Modal            */
 /* -------------------------- */
 
