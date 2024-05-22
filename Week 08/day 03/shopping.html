@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+</head>
+<body>
+    <h1>Shopping List</h1>
+    <form id="shoppingForm">
+        <input type="text" id="shoppingItem" name="shoppingItem" placeholder="Shopping Item">
+        x
+        <input type="number" id="shoppingQuantity" name="shoppingQuantity" placeholder="e.g. 1">
+        <button onclick="addItemToList(event)">Add to List</button>
+        <button onclick="clearList(event)">Clear</button>
+    </form>
+    <ul id="shoppingListDisplay">
+    </ul>
+    <!------------------------->
+    <!-- Javascript in a SPA -->
+    <!------------------------->
+    <script>
+        console.log("Connected")
+        
+        const shoppingItemInputElement = document.getElementById("shoppingItem")
+        const shoppingQuantityInputElement = document.getElementById("shoppingQuantity")
+        const shoppingListDisplayElement = document.getElementById("shoppingListDisplay")
+        const shoppingList = [];
+
+       
+
+        function addItemToList(event) {
+            event.preventDefault();
+            /* Step01: Get the value of the shopping item and quantity values from the inpute fields */
+            /* Step02: Store values into an object */
+            const shoppingItemToAdd = {item: shoppingItemInputElement.value, quantity: shoppingQuantityInputElement.value};
+            /* Step03: Add the object to the shopping list array */
+            shoppingList.push(shoppingItemToAdd);
+            /* Step04: Display the list of items */
+            console.log(shoppingList);
+            displayListOfItems();
+
+            // Clear the input fields
+            shoppingItemInputElement.value = '';
+            shoppingQuantityInputElement.value = '';
+        }
+
+        function displayListOfItems(){
+            shoppingListDisplayElement.innerHTML = "";
+            
+            for (const groceryItem of shoppingList) {
+                shoppingListDisplayElement.innerHTML += `
+                    <li>
+                        ${groceryItem.item} x ${groceryItem.quantity}
+                        <button 
+                            id="removeButton" 
+                            onclick="removeItemFromList(${shoppingList.indexOf(groceryItem)})" 
+                            style="
+                                cursor: pointer; 
+                                background: none; 
+                                border: none; 
+                                outline: none;
+                            "
+                        >
+                            &#10060;
+                        </button>
+                    </li>`;
+            }
+        }
+
+        function removeItemFromList(itemToDelete){
+            shoppingList.splice(itemToDelete, 1);
+            displayListOfItems();
+        }
+
+        function clearList(event){
+            event.preventDefault();
+            shoppingList.length = 0;
+            displayListOfItems();
+        }
+    </script>
+</body>
+</html>
