@@ -30,7 +30,7 @@
         <input type="text" id="shoppingBasket" name="shoppingBasket" placeholder="Bread, Cheese, etc.">
         <button onclick="validateBasket(event)">Add to Basket</button>
     </form>
-    <p>List of Items yet to be purchased:</p>
+    <p id="basketTitle">List of Items yet to be purchased:</p>
     <ul id="pendingItemsDisplay"></ul>
 
     <!------------------------->
@@ -44,7 +44,7 @@
         const shoppingListDisplayElement = document.getElementById("shoppingListDisplay")
         const shoppingBasketInputElement = document.getElementById("shoppingBasket")
         const pendingItemsDisplayElement = document.getElementById("pendingItemsDisplay")
-        
+        const basketTitle = document.getElementById("basketTitle");
         const shoppingList = [];
         const shoppingBasket = [];
 
@@ -111,6 +111,20 @@
             console.log(pendingPurchase);
             
             shoppingBasketInputElement.value = '';
+            pendingPurchase.innerHTML = '';
+            // Display the pending items
+            if(pendingPurchase.length === 0){
+                pendingItemsDisplayElement.innerHTML = "You have everything in your basket!";
+                basketTitle.innerHTML = "";
+            } else {
+                pendingItemsDisplayElement.innerHTML = "You still need to purchase the following items: ";
+                pendingPurchase.forEach(function(groceryItem){
+                pendingItemsDisplayElement.innerHTML += `
+                    <li>
+                        ${groceryItem.item} x ${groceryItem.quantity}
+                    </li>`;
+            })
+            }
         }
     </script>
 </body>
