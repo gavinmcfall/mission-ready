@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+.navbar button {
+  background-color: #7fffd4;
+  color: #242424 ;
+  margin: 20px;
+}
+
+.footer {
+  background-color: #7fffd4;
+  color: #242424 ;
+  margin: 20px;
+}
+
