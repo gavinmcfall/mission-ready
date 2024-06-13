@@ -23,3 +23,5 @@ function People() {
 }
 
 export default People;
+
+//Look at array sort
