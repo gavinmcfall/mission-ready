@@ -1,12 +1,10 @@
 import "./App.css";
-import Car from "./components/Car";
-import Person from "./components/Person";
-import Map from "./components/Map";
+import People from "./components/People";
 
 function App() {
   return (
     <div>
-      <Map />
+      <People />
     </div>
   );
 }
