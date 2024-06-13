@@ -1,11 +1,12 @@
 import "./App.css";
 import Car from "./components/Car";
 import Person from "./components/Person";
+import Map from "./components/Map";
 
 function App() {
   return (
     <div>
-      <Person name="Gavin" age="37" />
+      <Map />
     </div>
   );
 }
