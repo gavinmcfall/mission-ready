@@ -1,0 +1,41 @@
+body {
+    background-image: url("https://artsy-media-uploads.s3.amazonaws.com/2RNK1P0BYVrSCZEy_Sd1Ew%2F3417757448_4a6bdf36ce_o.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 90px;
+}
+/* I wish this used the same syntax as HTML for consistency */
+h3 {
+    font-size: 30px;
+    color: #FF0000;
+    background-color: black;
+}
+
+#title {
+    color: #0000FF;
+    font-size: 30px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.hardest {
+    color: rgb(178, 178, 178);
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+.best {
+    color: #00FF00;
+    font-weight: bolder;
+    text-decoration: underline;
+    font-size: 30px;
+}
+
+#days {
+    font-family: "Comic Sans MS";
+    color: white;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+</head>
+<body>
+    <!------------------------->
+    <!--    Shopping List    -->
+    <!------------------------->
+    <h1>Shopping List</h1>
+    <form id="shoppingForm">
+        <input type="text" id="shoppingItem" name="shoppingItem" placeholder="Bread, Cheese, etc.">
+        x
+        <input type="number" id="shoppingQuantity" name="shoppingQuantity" placeholder="e.g. 1">
+        <button onclick="addItemToList(event)">Add to List</button>
+        <button onclick="clearList(event)">Clear</button>
+    </form>
+
+    <ul id="shoppingListDisplay"></ul>
+
+    <br><hr><br>
+    <!------------------------->
+    <!---- Shopping Basket ---->
+    <!------------------------->
+    <h1>Shopping Basket</h1>
+    <p> Enter all the products you've put into your shopping basket. Sperated by commas, to see if you've forgotten anything!</p>
+    <form id="shoppingBasketForm">
+        <input type="text" id="shoppingBasket" name="shoppingBasket" placeholder="Bread, Cheese, etc.">
+        <button onclick="validateBasket(event)">Add to Basket</button>
+    </form>
+    <p id="basketTitle">List of Items yet to be purchased:</p>
+    <ul id="pendingItemsDisplay"></ul>
+
+    <!------------------------->
+    <!-- Javascript in a SPA -->
+    <!------------------------->
+    <script>
+        console.log("Connected")
+        
+        const shoppingItemInputElement = document.getElementById("shoppingItem")
+        const shoppingQuantityInputElement = document.getElementById("shoppingQuantity")
+        const shoppingListDisplayElement = document.getElementById("shoppingListDisplay")
+        const shoppingBasketInputElement = document.getElementById("shoppingBasket")
+        const pendingItemsDisplayElement = document.getElementById("pendingItemsDisplay")
+        const basketTitle = document.getElementById("basketTitle");
+        const shoppingList = [];
+        const shoppingBasket = [];
+
+        function addItemToList(event) {
+            event.preventDefault();
+            /* Step01: Get the value of the shopping item and quantity values from the inpute fields */
+            /* Step02: Store values into an object */
+            const shoppingItemToAdd = {
+                item: shoppingItemInputElement.value,
+                quantity: shoppingQuantityInputElement.value === '' ? 1 : shoppingQuantityInputElement.value // If no quantity is provided, default to 1
+            };
+            /* Step03: Add the object to the shopping list array */
+            shoppingList.push(shoppingItemToAdd);
+            /* Step04: Display the list of items */
+            console.log(shoppingList);
+            displayListOfItems();
+
+            // Clear the input fields
+            shoppingItemInputElement.value = '';
+            shoppingQuantityInputElement.value = '';
+        }
+
+        function displayListOfItems(){
+            shoppingListDisplayElement.innerHTML = "";
+            
+            for (const groceryItem of shoppingList) {
+                shoppingListDisplayElement.innerHTML += `
+                    <li>
+                        ${groceryItem.item} x ${groceryItem.quantity}
+                        <button 
+                            id="removeButton" 
+                            onclick="removeItemFromList(${shoppingList.indexOf(groceryItem)})" 
+                            style="
+                                cursor: pointer; 
+                                background: none; 
+                                border: none; 
+                                outline: none;
+                            "
+                        >
+                            &#10060;
+                        </button>
+                    </li>`;
+            }
+        }
+
+        function removeItemFromList(itemToDelete){
+            shoppingList.splice(itemToDelete, 1);
+            displayListOfItems();
+        }
+
+        function clearList(event){
+            event.preventDefault();
+            shoppingList.length = 0;
+            displayListOfItems();
+        }
+
+        function validateBasket(event){
+            event.preventDefault();
+            shoppingBasketInputElement.value.toLowerCase();
+            const basketItems = shoppingBasketInputElement.value.split(",");
+            const pendingPurchase = shoppingList.filter(function(groceryItem) {
+                return !basketItems.includes(groceryItem.item.toLowerCase());
+            })
+            console.log(pendingPurchase);
+            
+            shoppingBasketInputElement.value = '';
+            pendingPurchase.innerHTML = '';
+            // Display the pending items
+            if(pendingPurchase.length === 0){
+                pendingItemsDisplayElement.innerHTML = "You have everything in your basket!";
+                basketTitle.innerHTML = "";
+            } else {
+                pendingItemsDisplayElement.innerHTML = "You still need to purchase the following items: ";
+                pendingPurchase.forEach(function(groceryItem){
+                pendingItemsDisplayElement.innerHTML += `
+                    <li>
+                        ${groceryItem.item} x ${groceryItem.quantity}
+                    </li>`;
+            })
+            }
+        }
+    </script>
+</body>
+</html>

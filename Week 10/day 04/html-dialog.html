@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <dialog>
+            <p>Greetings one and all</p>
+            <form method="dialog">
+                <button>Ok</button>
+            </form>
+        </dialog>
+        <button>Open pop up</button>
+        <dialog id="dialog">
+          <div class="dialog-container">
+              <h1>I'm Open!</h1>
+              <button>Close</button>
+          </div>
+        </dialog>
+    </div>
+</body>
+</html>

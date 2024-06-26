@@ -1,0 +1,53 @@
+/* ------------------------ */
+/*       Form Section       */
+/* ------------------------ */
+
+.modal-content {
+    background-color: #bebebe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Set the width to 50% of the window width */
+    border-radius: 8px;
+  }
+
+#contactForm textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 50px; /* adjust this value as needed */
+}
+
+.form-field {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: flex-start;
+  }
+  
+  .form-field label {
+    margin-right: 10px;
+    width: 60px;
+  }
+  
+  .form-field input,
+  .form-field textarea {
+    flex-grow: 1;
+  }
+
+  #contactMessage {
+    height: 200px;
+    border-radius: 8px;
+  }
+
+  #contactForm {
+    max-width: 95%; /* Set a max-width on the form */
+  }
+
+  #contactName, #contactEmail, #contactMessage {
+    background-color: #bebebe;
+    border-color: #1a1e21;
+  }
+
+  label {
+    font-weight: 700;
+  }

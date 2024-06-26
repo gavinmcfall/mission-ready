@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gavin</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/contact.css">
+    <script defer src="resources/js/main.js"></script>
+    <script defer src="resources/js/counter.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <div class="name">
+                Gavin McFall
+            </div>
+            <div class ="nav">
+                <button class="contact-button">Contact</button> 
+                <div class="website-counter"></div>
+                <div class="small-text">Visitors:</div>
+            </div>
+        </div>
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <form id="contactForm" onsubmit="event.preventDefault(); submitForm(); clearForm();">
+                <div class="form-field">
+                  <label for="name">Name:</label>
+                  <input type="text" id="contactName" name="contactName" required>
+                </div>
+                <div class="form-field">
+                  <label for="email">Email:</label>
+                  <input type="email" id="contactEmail" name="contactEmail" required>
+                </div>
+                <div class="form-field">
+                  <label for="message">Message:</label>
+                  <textarea id="contactMessage" name="contactMessage" required></textarea>
+                </div>
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>
+        <div class="middle">
+            <div class="left">
+                <h1>Who am I?</h1>
+                <ul>
+                    <li class="details">Quality Assurance Engineer</li>
+                    <li class="details">Father</li>
+                    <li class="details">Amateur Photographer</li>
+                    <li class="details">Motor Head</li>
+                    <li class="details">PC Master Race</li>
+                    <li class="details">All-Round Nerd</li>
+                </ul>
+            </div>
+            <div class="right">
+                <img class="me" src="resources/images/me.png" alt="Description of the image"/>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="https://www.linkedin.com/in/gavinmcfall" class="social-icon linkedin" target="_blank"></a>
+            <a href="mailto:gavin.mcfall@nerdz.co.nz" class="social-icon mail" target="_blank"></a>
+            <a href="https://github.com/gavinmcfall" class="social-icon github" target="_blank"></a>
+        </div>
+    </div>
+</body>
+</html>

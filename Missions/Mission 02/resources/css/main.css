@@ -1,0 +1,323 @@
+/* -------------------------- */
+/*       Core Structure       */
+/* -------------------------- */
+
+body {
+    background-color: #1a1e21;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 100% of the screen */
+}
+
+/* ----------------------- */
+/*       Top Section       */
+/* ----------------------- */
+
+.top {
+    display: flex;
+    height: 10%; /* 10% of the screen */
+    gap: 10px; /* space between the two middle sections */
+    height: 10vh;
+}
+
+.name, .nav {
+    flex: 1; /* 50:50 Split */
+    padding: 20px;
+}
+
+.name {
+    display: flex;
+    text-align: left;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 100px;
+    align-items: center;
+    color: #bebebe;
+}
+
+.nav > p > a {
+    text-decoration: none;
+    color: #bebebe;
+}
+
+.nav {
+    display: flex;
+    padding-right: 50px;
+    flex-direction: row-reverse;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 30px;
+    align-items: center;
+    color: #bebebe;
+}
+
+
+.contact-button {
+    cursor: pointer;
+    background-color: #bebebe;
+    color: #1a1e21;
+    font-family: Verdana;
+    font-size: 30px;
+    border-radius: 8px;
+    border: 2px solid #bebebe;
+}
+
+/* -------------------------- */
+/*          Counter           */
+/* -------------------------- */
+
+/* Styles for website counter container */
+.website-counter {
+  background-color: #ff4957;
+  height: 40px;
+  width: 80px;
+  color: white;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 25px;
+  /* margin-top: 10px; */
+  margin-right: 50px;
+  align-items: center;
+  justify-content: center;
+    display: flex;
+}
+
+.small-text {
+    font-size: 30px;
+    margin-right: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------------- */
+/*           Modal            */
+/* -------------------------- */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .close {
+    color: #1a1e21;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #1a1e21;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+/* -------------------------- */
+/*       Middle Section       */
+/* -------------------------- */
+
+.middle {
+    display: flex;
+    flex: 1; /* take up remaining space */
+    gap: 10px; /* space between the two middle sections */
+    padding: 20px;
+}
+
+.left, .right {
+    flex: 1; /* 50:50 Split */
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+    padding-right: 20px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: flex-end; /* Aligns children to the bottom of the container */
+    align-items: center; /* Centers children horizontally */
+    padding-left: 20px;
+}
+
+.me {
+    display: flex;
+    width: 95%;
+    height: 95%;
+}
+
+h1 {
+    padding-top: 100px;
+    font-size: 40px;
+    font-family: verdana;
+    font-weight: 700;
+    color: #bebebe;
+    padding: 20px;
+}
+
+ul {
+    padding-left: 60px;
+}
+
+.details {
+    font-size: 20px;
+    padding: 20px;
+    font-family: verdana;
+    font-weight: 400;
+    color: #bebebe;
+}
+
+.about-panel, .contact-panel {
+    flex: 1; /* 50:50 Split */
+    padding: 20px;
+}
+
+.contact-panel {
+    display: flex;
+}
+
+.contact-labels {
+    display: flex;
+    width: calc(5% - 20px);
+    height: 140px;
+    color: #bebebe;
+}
+
+.contact-entry {
+    display: flex;
+    width: calc(95%);
+    height: 140px;
+}
+
+
+/* ------------------------ */
+/*       Form Section       */
+/* ------------------------ */
+
+.form-entry {
+    width: calc(100%-40px);
+    padding: 20px;
+}
+
+.submit {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.contact-labels {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    border: none;
+    border-bottom: 2px solid #bebebe;
+    margin-bottom: 20px;
+}
+
+.contact-entry {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    /* border-bottom: 2px solid #bebebe; */
+}
+
+.reason {
+    color: #bebebe;
+}
+
+.message {
+    color: #bebebe;
+}
+
+input[type=text], input[type=email], input[type=company] {
+    border: none;
+    border-bottom: 2px solid #bebebe;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+input[type=text] {
+    margin-top: 1.2px;
+}
+
+/* -------------------------- */
+/*       Bottom Section       */
+/* -------------------------- */
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 125px;
+    height: 100px;
+}
+
+.social-icon {
+    width: 50px; /* Set the width and height of the container */
+    height: 50px;
+    background-size: cover; /* Ensure the background image covers the container */
+}
+
+.linkedin {
+    align-items: flex-end;
+    position: absolute;
+    bottom: calc(0%-130px);
+    right: calc(50% + 50px);
+    background-image: url('../images/linkedin.png'); /* Set the default image */
+}
+
+.linkedin:hover {
+    width: 205px;
+    opacity: 1;
+    background-image: url('../images/linkedin_expanded.png'); /* Set the hover image */
+}
+
+.mail {
+    align-items: flex-end;
+    position: absolute;
+    bottom: calc(0%-130px);
+    background-image: url('../images/mail.png'); /* Set the default image */
+}
+
+.mail:hover {
+    align-items: flex-end;
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    opacity: 1;
+    background-image: url('../images/mail_expanded.png'); /* Set the hover image */
+}
+
+.github {
+    align-items: flex-end;
+    position: absolute;
+    left: calc(50% + 50px);
+    bottom: calc(0%-130px);
+    background-image: url('../images/github.png'); /* Set the default image */
+}
+
+.github:hover {
+    width: 200px;
+    opacity: 1;
+    background-image: url('../images/github_expanded.png'); /* Set the hover image */
+}
