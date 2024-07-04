@@ -1,0 +1,36 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  border: solid 1px darkblue;
+  margin: 20px auto;
+  padding: 20px;
+  width: 50%;
+  border-radius: 5px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.form-container label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.form-container input {
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 3px;
+  margin: 6px 0;
+}
+
+.submit-btn {
+  background-color: black;
+  padding: 5px;
+  color: #fff;
+  border-radius: 3px;
+  font-family: inherit;
+  margin-bottom: 6px;
+}
