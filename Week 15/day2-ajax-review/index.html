@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Review</title>
+    <script src="script.js" defer></script>
+    <style>
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        #dropdownContainer {
+            margin-right: 10px;
+        }
+        #buttonContainer {
+            margin-right: 10px;
+        }
+        #displayCountryContainer {
+            display: flex;
+            align-items: center;
+        }
+        #displayCountry {
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+            min-height: 50px; /* Adjust as needed */
+        }
+        #displayCountry > div {
+            margin-bottom: 5px; /* Adjust the value as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1>AJAX Review</h1>
+    <div class="container">
+        <div id="dropdownContainer">
+            <select id="countryDropdown"></select>
+        </div>
+        <div id="buttonContainer">
+            <button onclick="displaySelectedCountry()">Display selected country population and borders</button>
+        </div>
+        <div id="displayCountryContainer">
+            <div id="displayCountry"></div>
+        </div>
+    </div>
+</body>
+</html>
