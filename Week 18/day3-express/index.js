@@ -48,7 +48,7 @@ const userList = [
     id: 6,
     name: "Jenny",
     lastName: "Taylor",
-    age: 26,
+    age: 25,
     email: "jenny@example.com",
     phone: "555-9876",
   },
@@ -74,7 +74,10 @@ app.get("/api/userList/:id", (req, res) => {
   const requestedId = parseInt(req.params.id, 10); // Convert the id to an integer
   const user = userList.find((user) => user.id === requestedId);
   if (user) {
-    res.status(200).json({ status: "success", data: { firstName: user.name, lastName: user.lastName } });
+    res.status(200).json({
+      status: "success",
+      data: { firstName: user.name, lastName: user.lastName },
+    });
   } else {
     res.status(404).json({ status: "error", message: "User not found!" });
   }
@@ -96,6 +99,19 @@ app.get("/api/contact", (req, res) => {
         <h1>Gavin McFall</h1>
         <a href="mailto:gavinm@missionreadyhq.com?subject=Hello%20World&body=This%20is%20a%20test%20email.">Email: gavinm@missionreadyhq.com</a>
         </div>`);
+});
+
+app.get("/api/profile", function (req, res) {
+  console.log(req.query);
+  console.log(req.query.age);
+  const requestedAge = req.query.age;
+  const profile = userList.filter((user) => user.age === Number(requestedAge));
+  console.log(profile);
+  if (profile) {
+    res.status(200).json({ status: "Success", data:profile);
+  } else {
+    res.status(404).json({ status: "error", message: "User not found!" });
+  }
 });
 
 app
