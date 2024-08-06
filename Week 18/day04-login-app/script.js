@@ -18,12 +18,16 @@ function sendLogin(event) {
       email: emailInput.value,
       password: password.value,
     }),
-  }),
-    then((res) => {
+  })
+    .then((res) => {
       if (res.status === 200) {
-        loginResultElement.innerText = `<Span stytle="color: green">Login successful</span>`;
+        loginResultElement.innerHTML = `<span style="color: green">Login successful</span>`;
       } else if (res.status === 401) {
-        loginResultElement.innerText = `<Span stytle="color: red">Login failed</span>`;
+        loginResultElement.innerHTML = `<span style="color: red">Login failed</span>`;
       }
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+      loginResultElement.innerHTML = `<span style="color: red">An error occurred</span>`;
     });
 }
