@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background-color: blueviolet;
+  width: 190px;
+  padding: 25px;
+  margin: 20px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card > img {
+  width: 85px;
+  border-radius: 50%;
+}
