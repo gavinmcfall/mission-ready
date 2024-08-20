@@ -20,19 +20,7 @@ const pool = mysql.createConnection({
 
 //Endpoints
 app.get("/", (req, res) => {
-  res.send("Backend is Connected DOGG");
-});
-
-app.get("/api/v1/users", (req, res) => {
-  pool.query("SELECT * FROM team_mate;", (err, result) => {
-    if (err) {
-      console.log("Database query error! ", err);
-      return res
-        .status(500)
-        .json({ status: "error", message: "Database query error!" });
-    }
-    res.status(200).json({ status: "success", data: result });
-  });
+  res.send("Backend is Connected!");
 });
 
 const PORT = process.env.PORT;
