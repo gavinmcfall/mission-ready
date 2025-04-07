@@ -1,0 +1,71 @@
+.top{
+    display: flex;
+    justify-content:space-around;
+    background-color: white;
+    height: 80px;
+    width: 1920px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 30px;
+    font-size: larger;
+    margin-top: 30px; 
+    margin-left: 1050px; 
+    padding:0
+    
+
+}
+
+.navButtons1{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f81d84;
+    color:white;
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    border: none;
+    margin-top: 20px;
+
+}
+.navButtons2{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #44bff8;
+    color:white;
+    border-radius: 10px;
+    width: 200px;
+    height: 35px;
+    border: none;
+    margin-top: 20px;
+}
+
+.brandLogo{
+    padding-right: 100px;
+  margin-top: 10px;
+    width: 146px;
+    margin-left: 50px;
+  height: 60px;
+ 
+}
+
+.flag{
+    height: 10px;
+}
+
+.flagContainer{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    margin-left: auto;
+    margin-bottom: auto;
+    margin-top: 40px;
+    margin-right: 20px;
+}

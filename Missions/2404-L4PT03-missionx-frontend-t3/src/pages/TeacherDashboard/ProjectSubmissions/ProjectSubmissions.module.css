@@ -1,0 +1,60 @@
+.body 
+  {
+  display: flex;
+  background-color:#B2E4FA;
+  height:calc(100vh - 130px);
+  }
+.main
+  {
+  display: flex; 
+  margin: auto;
+  background-color: #FFFFFF80;
+  width: 1550px;
+  height: 760px;
+  border-radius: 30px;
+  }
+.top
+  {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 60px;
+  }
+.subHeading{
+  display: flex;
+  gap: 60px;
+  }
+.subHeading h3 button{
+  font-family:'Open Sans';
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  background: transparent;
+  gap: 60px;
+  }
+.subHeading h3 button:hover{
+  cursor: pointer;
+  }
+.scrollbox{
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 1510px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  }
+.scrollbox::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  } 
+.scrollbox::-webkit-scrollbar-track {
+  background: #f2f4f5; /* Background color of the scrollbar track */
+  border-radius: 4px;
+  } 
+.scrollbox::-webkit-scrollbar-thumb {
+  background: #43c0f6; /* Color of the scrollbar thumb */
+  border-radius: 4px;
+  } 
+.scrollbox::-webkit-scrollbar-thumb:hover {
+  background: #35a9dd; /* Color of the scrollbar thumb when hovered */
+  }
+

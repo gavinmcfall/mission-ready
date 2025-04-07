@@ -1,0 +1,69 @@
+body {
+  background-color: #eeeeee;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto auto auto auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "footerEmpty footerCompany footerCourses footerSupport footerLegal footerLevelup footerLevelup footerEnd";
+}
+
+/* Footer */
+
+.footerEmpty,
+.footerCompany,
+.footerCourses,
+.footerSupport,
+.footerLegal,
+.footerLevelup,
+.footerEnd {
+  background-color: #b2e4fa;
+  height: 634px;
+}
+
+.footerTitle {
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #707070;
+  padding-top: 154px;
+}
+
+.footerText {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  color: #707070;
+  letter-spacing: 0.4px;
+  line-height: 32px;
+}
+
+.footerText p {
+  margin-bottom: 5px; /* Adjust paragraph spacing */
+}
+
+.footerEmpty {
+  grid-area: footerEmpty;
+}
+
+.footerCompany {
+  grid-area: footerCompany;
+}
+.footerCourses {
+  grid-area: footerCourses;
+}
+.footerSupport {
+  grid-area: footerSupport;
+}
+.footerLegal {
+  grid-area: footerLegal;
+}
+.footerLevelup {
+  grid-area: footerLevelup;
+}
+.footerEnd {
+  grid-area: footerEnd;
+}

@@ -1,0 +1,44 @@
+body {
+  background-color: #eeeeee;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header"
+    "body"
+    "footer";
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  height: 64px;
+  width: 100%;
+}
+
+.body {
+  grid-area: body;
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  height: 100px;
+  width: 100%;
+}

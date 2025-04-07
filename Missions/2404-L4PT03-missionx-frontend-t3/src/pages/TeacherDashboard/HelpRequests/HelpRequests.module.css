@@ -1,0 +1,103 @@
+body{
+    margin:0px;
+}
+
+.body {
+    display: flex;
+    /* flex-direction: row; */
+    background-color:#B2E4FA;
+    width: 1920px;
+    height: 670px;
+}
+.main{
+    /* display: flex; */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Limit height to viewport for scrollable area */
+    margin:auto;
+background-color: #FFFFFF80;
+width: 1571px;
+height: 760px;
+border-radius: 30px;
+}
+
+
+.top{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 30px;
+    font-size: larger;
+    margin-top: 30px; 
+    margin-left: 1150px; 
+    padding:0
+    
+}
+
+.main h1 {
+  margin-left: 50px; 
+}
+
+
+/* .scrollbox{
+    display: block;
+    overflow-y: scroll;
+} */
+
+div.scrollbox{
+    display: block;
+    /* overflow: visible; */
+    width: 800px;
+    height: 200px;
+    scrollbar-color: blue pink;
+}
+div::-webkit-scrollbar-track{
+ background-color: #F91C85;
+  }
+
+  .requestWrapper {
+    display: flex;
+    /* width: 2000px; */
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 00px;
+    padding: 10px;
+    background-color: transparent;
+    
+  }
+  
+  .checkbox {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .request {
+    display: flex;
+    align-items: center;
+    width: 1306px;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: white;
+  }
+  
+  .Studentpic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 60px;
+    margin-right: 70px;
+  }
+  
+  .message {
+    flex: 1;
+    font-size: 24px;
+    color: #555;
+  }
+  
+  .time {
+    text-align: right;
+    font-size: 14px;
+    color: #aaa;
+  }

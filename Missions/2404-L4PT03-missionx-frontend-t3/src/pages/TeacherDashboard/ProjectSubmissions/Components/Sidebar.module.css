@@ -1,0 +1,154 @@
+
+.teacher{
+height: 80px;
+width: 80px;
+margin-top: 30px;
+padding-bottom: 10px;
+padding-left: 10px;
+}
+.Sidebar
+{
+font-family:serif;
+background-color: #43c0f6;
+width: 280px; 
+transition: width 0.3s ease-in-out;
+color: white;
+font-weight: 400;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.Sidebar ul  li:hover{
+cursor: pointer;
+background-color: #B2E4FA;
+color: white; 
+}
+.footerNavBar
+{
+pointer-events: none;   
+} 
+.Sidebar li
+{
+display: flex;
+align-items: center;
+list-style:none;
+width: 100%;
+padding-left: 10%;
+}
+.Sidebar a.active li{
+color: black;
+background-color: #B2E4FA; 
+}
+a.active
+{
+background-color: red;
+color: red;
+border-top: black solid 10px;
+}
+.isActive 
+{
+width: 7vw;
+transition: width 0.3 ease-in-out;
+}
+.Sidebar>ul
+{
+display: flex;
+justify-content: center;
+flex-direction: column;
+gap: 10px;
+padding: 0;
+width: 100%;
+}
+.Sidebar li>img{
+height: 25px;
+padding-right: 20px;
+}
+.isActive li>img{
+height: 40px;
+padding-bottom: 20px;
+padding-left: 25%;
+}
+.isActive li p{
+display:none;
+}
+.isActive ul{
+padding: 0;   
+}
+.isActive ul>.button{
+display: flex;
+padding: 0;
+background-color:#B2E4FA ;
+height: 64px;
+width: 72px;
+margin-right: 60px;
+border-top-right-radius:10px;
+border-bottom-right-radius:10px;
+border-top-left-radius: 0; 
+border-bottom-left-radius: 0; 
+}
+.isActive .button img{
+transform: rotate(180deg);
+}
+.button
+{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color:#B2E4FA ;
+height: 64px;
+width: 72px;
+border: none;
+border-top-left-radius: 10px; 
+border-bottom-left-radius: 10px;
+margin-left: 100px;
+margin-left: auto;
+transition: width 0.3 ease-in-out;
+margin-bottom: 140px;  
+} 
+.button:hover
+{
+cursor: pointer;
+}
+.footerNavBar li img{
+display: flex;
+height: 15px; 
+width: 15px;
+justify-content: center;
+align-items: center;
+margin-top:140px;    
+}
+.footerNavBar ul li{
+display: flex;
+flex-direction: column;
+justify-content:center;
+align-items: center;
+}
+.footerNavBar ul{
+display: flex;
+justify-content: center;
+align-items: center; 
+padding: 0;   
+}
+.footerNavBar li p{
+display: flex;
+font-size: 12px;
+width: 50px;
+align-items: center;
+}
+.isActive>.footerNavBar li p{
+display: none;
+}
+.isActive>.footerNavBar ul{
+display: flex;
+justify-content: center;
+flex-direction: column;
+}
+.isActive>.footerNavBar li>img{
+display: flex;
+height: 20px; 
+width: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-top: auto;
+}
+

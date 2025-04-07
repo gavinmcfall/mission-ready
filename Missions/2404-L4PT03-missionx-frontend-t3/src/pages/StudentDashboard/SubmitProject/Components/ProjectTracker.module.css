@@ -1,0 +1,41 @@
+.projectTracker{
+  display: flex;
+  justify-content:flex-end;
+  align-items: end;
+  gap:15px;
+  font-family: monospace;
+  margin-left:20px;
+  margin-bottom: 10px;
+}
+
+
+.bigCircle {
+  cursor: pointer;
+  display: flex;
+  font-size: xx-large;
+  justify-content: center;
+  align-items: end;
+  align-content: end;
+  height: 30px;
+  width: 30px;
+  border: solid #7bceed;
+  border-radius: 30px;
+  background-color: rgb(255, 255, 193)
+  }
+  
+  .smallCircle{
+    cursor: pointer;
+    justify-content: start;
+    align-content: start;
+    align-items: start;
+    gap:10px;
+    height: 10px;
+    width: 10px;
+    border-radius: 30px;
+    border: solid #7bceed;
+  }
+  
+
+  
+ 
+  

@@ -1,0 +1,119 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "student studentDetails studentDetails";
+  background-color: #eeeeee;
+}
+
+.student {
+  grid-area: student;
+  height: 1023px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.studentPanel {
+  background-color: #ffffff;
+  width: 361px;
+  height: 575px;
+  border: 2px solid #e2dfdf;
+  border-radius: 30px;
+  margin-top: 139px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.studentAvatar {
+  height: auto;
+  width: 50%;
+  display: flex;
+  margin-top: 82px;
+  border: 2px solid #e2dfdf;
+  border-radius: 50%;
+  margin-top: 139px;
+  margin-bottom: 69px;
+}
+
+.avatarButton {
+  background-color: transparent;
+  color: #5ac8f7;
+  border: 2px solid #5ac8f7;
+  border-radius: 10px;
+  width: 175px;
+  height: 35px;
+  font-size: 16px;
+  font-weight: bold;
+  font-weight: bold;
+  margin-bottom: 34px;
+}
+
+.studentDetails {
+  grid-area: studentDetails;
+  height: 1023px;
+  display: flex;
+  margin-left: 70px;
+}
+
+.studentDetailsPanel {
+  background-color: #ffffff;
+  width: 820px;
+  height: 712px;
+  border: 2px solid #e2dfdf;
+  border-radius: 30px;
+  margin-top: 139px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "studentTitles studentTitles"
+    "studentDetailsLabels studentDetailsValues";
+}
+
+.studentTitles {
+  grid-area: studentTitles;
+  display: flex;
+  justify-content: center;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+  color: #707070;
+  padding-top: 54px;
+  padding-bottom: 65px;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+}
+.studentDetailsLabels {
+  grid-area: studentDetailsLabels;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 52px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: left;
+  color: #a5a5a5;
+  letter-spacing: 0.6px;
+  line-height: 30px;
+}
+.studentDetailsValues {
+  grid-area: studentDetailsValues;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-left: 52px;
+  padding-right: 10px;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: left;
+  color: #707070;
+  letter-spacing: 0.6px;
+  line-height: 30px;
+}

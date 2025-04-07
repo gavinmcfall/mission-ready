@@ -1,0 +1,231 @@
+h1,
+h2,
+h3,
+h4 {
+  color: #606060;
+  font-style: Open Sans;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header"
+    "body"
+    "footer";
+  height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  height: 64px;
+  width: 100%;
+}
+
+.body {
+  grid-area: body;
+  background-color: white;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  gap: 0px 0px;
+  grid-template-areas:
+    "Subbody1 "
+    "Subbody2 "
+    "Subbody3 "
+    "Subbody4 "
+    "Subbody5 ";
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f8f8;
+  height: 100px;
+  width: 100%;
+}
+
+/* Body */
+
+/* Prepare young minds section  */
+
+.Subbody1 {
+  grid-area: Subbody1;
+  position: relative; /* Ensures absolute positioning within this container */
+  padding-bottom: 5%;
+  width: 80%;
+  padding: 20px;
+}
+.heroText {
+  width: 500px;
+}
+.heroImg {
+  align-self: flex-start;
+}
+
+.heroText {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 10%;
+
+  z-index: 1; /* Ensure the text is above the image */
+}
+
+.highlight {
+  color: #40c4ff;
+}
+
+.buttons {
+  padding-top: 20px;
+}
+
+.learnMoreButton {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  color: #707070;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 5px #00000029;
+  border: 3px solid #43c0f6;
+  border-radius: 7px;
+  width: 175px;
+  height: 35px;
+}
+
+.signUpButton {
+  background-color: #ff4081;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font: normal normal 900 16px/22px Nunito;
+  letter-spacing: 0.32px;
+  color: #f0efef;
+  border-radius: 7px;
+  width: 175px;
+  height: 35px;
+}
+.subscriptionNote {
+  font-size: 12px;
+  color: #707070;
+  padding-top: 10px;
+  padding-left: 35%;
+  width: 180px;
+}
+
+/* image button  section with image display */
+
+.Subbody2 {
+  grid-area: Subbody2;
+  display: flex;
+  padding-bottom: 5%;
+  width: 80%;
+  padding: 20px;
+}
+.Subbody2 > div {
+  flex: 1;
+  background-color: none;
+}
+
+.Subbody2 button {
+  border-style: none;
+  cursor: grab;
+}
+
+/*Students Skills imaage section  */
+.Subbody3 {
+  grid-area: Subbody3;
+  padding-bottom: 5%;
+  width: 80%;
+  /* padding: 20px; */
+  align-items: start;
+  padding-left: 0px;
+}
+.Subbody3 > h2 {
+  text-align: center;
+}
+
+.skillsImg {
+  display: flex;
+
+  justify-content: space-evenly;
+  width: 80%;
+  padding: 20px;
+}
+
+/* How the program helps teacher and school  */
+
+.Subbody4 {
+  grid-area: Subbody4;
+  padding-bottom: 5%;
+  width: 80%;
+  padding: 20px;
+}
+.PgmBenefitsBttn {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.Subbody4 h1 {
+  align-items: center;
+}
+
+.Subbody4 > ul {
+  list-style: none;
+}
+.Subbody4 > .star {
+  width: 40px;
+  height: 36.8px;
+}
+.clicked {
+  background-color: #b2e4fa;
+  background-color: white;
+  border: 3px solid none;
+  font-size: 16px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 5px #00000029;
+}
+.notClicked {
+  background-color: #b2e4fa;
+  background-color: white;
+  border: 3px solid #43c0f6;
+  font-size: 16px;
+  padding: 10px 10px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 5px #00000029;
+}
+
+.contentsli {
+  display: flex;
+  padding: 10px 10px;
+}
+
+.Subbody5 {
+  grid-area: Subbody5;
+  display: flex;
+  padding-bottom: 5%;
+  width: 80%;
+  padding: 20px;
+}
+.Subbody5 > div {
+  flex: 1;
+}
+.Subbody5Img {
+  width: 625px 282px;
+  height: 417px 2525px;
+}

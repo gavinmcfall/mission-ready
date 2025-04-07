@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap");
+
+.container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "filterList projects";
+}
+
+.filterSection {
+  display: flex;
+  flex-direction: column;
+  padding-left: 230px;
+  padding-top: 20vh;
+}
+
+.filterList {
+  grid-area: filterList;
+  display: flex;
+  height: auto;
+  background-color: #ffffff;
+  padding-right: 100px;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+}
+
+.filterGroup h3 {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.32px;
+  color: #767676;
+  padding-top: 50px;
+}
+
+.filterGroup label {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.28px;
+  color: #767676;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+/*----------------------*/
+/* Project Group Styles */
+/*----------------------*/
+
+.projects {
+  grid-area: projects;
+  display: flex;
+  flex-direction: column;
+  height: auto; /* Allow the height to be determined by content */
+  width: 100%;
+  overflow: visible; /* Remove auto to let .projectList handle the scrolling */
+}
+
+.projectHeader {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  flex-grow: 1;
+  background-color: #ffffff;
+  padding-bottom: 25px;
+}
+
+.projectHeader h1 {
+  margin-top: 10vh;
+  font-family: "Nunito", sans-serif;
+  font-size: 42px;
+  font-weight: 900; /* Black weight */
+  letter-spacing: 0.84px;
+  margin-bottom: 0px;
+}
+
+.projectHeader h2 {
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: 900; /* Black weight */
+  letter-spacing: 0.4px;
+}
+
+.projectFilter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-grow: 1;
+  /* height: 10vh; */
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.projectList {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  height: auto; /* Ensure this container adjusts with the content */
+  overflow-y: auto; /* Enable vertical scrolling if necessary */
+  justify-content: center;
+  background-color: transparent; /* Ensure no background color spills over */
+}
+
+.level {
+  display: flex;
+  align-items: flex-start;
+  background-color: #c3bfbc;
+}
+
+.level button {
+  height: 22px;
+  width: 115px;
+  padding-left: 1px;
+  padding-right: 1px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #f5f1f0;
+  border: none;
+}
+
+.level button:first-child {
+  border-radius: 5px 0 0 5px; /* Rounded corners for the first button */
+}
+
+.level button:last-child {
+  border-radius: 0 5px 5px 0; /* Rounded corners for the last button */
+}
+
+.level button.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.level button:hover:not(.active) {
+  background-color: #e6e6e6;
+}
+
+/* Optional: Slight separator between buttons */
+.level button + button {
+  position: relative;
+}
+
+.level button + button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+  background-color: #ddd;
+  z-index: 1; /* Ensure it's above the buttons */
+}
+
+.resultNum {
+  display: flex;
+  align-items: flex-start;
+  padding-right: 13vw;
+}
+
+.resultNum span {
+  display: flex;
+  align-items: center;
+  margin-right: 22px;
+}
+
+.resultNum button {
+  background-color: #f5f1f0;
+  color: #333333;
+  border: 1px solid #ddd; /* Default border for all buttons */
+  cursor: pointer;
+  border-radius: 0;
+  transition: background-color 0.3s ease;
+  height: 22px;
+  width: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  box-sizing: border-box;
+}
+
+.resultNum button:first-child {
+  border-radius: 5px 0 0 5px; /* Rounded corners for the first button */
+}
+
+.resultNum button:last-child {
+  border-radius: 0 5px 5px 0; /* Rounded corners for the last button */
+}
+
+.resultNum button.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.resultNum button:hover:not(.active) {
+  background-color: #e6e6e6;
+}
+
+/* Optional: Slight separator between buttons */
+.resultNum button + button {
+  position: relative;
+}
+
+.resultNum button + button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+  background-color: #ddd;
+  z-index: 1; /* Ensure it's above the buttons */
+}
+
+body {
+  background-color: #fff !important; /* Set body background color to white if needed */
+}

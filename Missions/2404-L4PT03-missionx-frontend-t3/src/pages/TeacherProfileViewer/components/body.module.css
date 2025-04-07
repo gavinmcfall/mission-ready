@@ -1,0 +1,157 @@
+.container {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "teacher teacherDetails teacherDetails";
+    background-color: #eeeeee;
+  }
+  
+  .teacher {
+    grid-area: teacher;
+    height: 1050px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .teacherPanel {
+    background-color: #ffffff;
+    width: 361px;
+    height: 550px;
+    border: 2px solid #e2dfdf;
+    border-radius: 30px;
+    margin-top: 139px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .teacherAvatar {
+    width: 50%;
+    display: flex;
+    margin-top: 50px;
+    border: 2px solid #e2dfdf;
+    border-radius: 50%;
+    margin-bottom: 69px;
+  }
+  
+  .avatarButton {
+    background-color: transparent;
+    color: #5ac8f7;
+    border: 2px solid #5ac8f7;
+    border-radius: 10px;
+    width: 175px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    font-weight: bold;
+    margin-bottom: 34px;
+  }
+  
+  .teacherDetails {
+    
+    grid-area: teacherDetails;
+    height: 1023px;
+    display: flex;
+    margin-left: 70px;
+  }
+  
+  .teacherDetailsPanel {
+    background-color: #ffffff;
+    width: 1050px;
+    height: 650px;
+    border: 2px solid #e2dfdf;
+    border-radius: 30px;
+    margin-top: 139px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "teacherTitles teacherTitles"
+      "teacherDetailsLabels teacherDetailsValues";
+  }
+  
+  .teacherTitles {
+    height: 100px;
+    grid-area: teacherTitles;
+    display: flex;
+    justify-content: center;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 60px;
+    color: #707070;
+    padding-top: 54px;
+    padding-bottom: 20px;
+    letter-spacing: 1.2px;
+  }
+  .teacherDetailsLabels {
+    grid-area: teacherDetailsLabels;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 20px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+    color: #a5a5a5;
+    letter-spacing: 0.6px;
+    margin-bottom: 100px;
+   
+  }
+  .teacherDetailsValues {
+    grid-area: teacherDetailsValues;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 52px;
+    padding-right: 10px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: left;
+    color: #707070;
+    letter-spacing: 0.6px;
+    margin-bottom: 100px;
+    
+   
+  }
+
+  .profilebuttons {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    width: auto;
+    margin-top: 10px;
+  }
+  
+  .profilebuttons button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+  
+  .backproject {
+    background-color: #ffc107;
+  }
+  
+  .backproject:hover {
+    background-color: #e0a800;
+  }
+  
+  .backdashboard {
+    background-color: #ff4081;
+  }
+  
+  .backdashboard:hover {
+    background-color: #e03573;
+  }
+
+  

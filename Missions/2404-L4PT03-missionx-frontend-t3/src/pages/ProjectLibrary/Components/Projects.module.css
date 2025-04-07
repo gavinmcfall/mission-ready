@@ -1,0 +1,43 @@
+/* Projects.module.css */
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@900&display=swap");
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(400px, 1fr)
+  ); /* Adjust the min width */
+  gap: 20px; /* Space between cards */
+  justify-content: start; /* Align to the start to remove the space */
+}
+
+.card {
+  margin: 20px;
+  text-align: center;
+  color: #000000;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.card > h1 {
+  font-family: "Nunito", sans-serif;
+  color: #767676;
+  font-size: 30px;
+  font-weight: 900; /* Black weight */
+  letter-spacing: 0.84px;
+}
+
+.card > h2 {
+  font-family: "Nunito", sans-serif;
+  color: #767676;
+  font-size: 20px;
+  font-weight: 900; /* Black weight */
+  letter-spacing: 0.84px;
+}

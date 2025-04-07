@@ -1,0 +1,107 @@
+body {
+  background-color: #43c0f6;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: auto auto auto auto;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "branding branding navLinks navLinks navLinks navLinks languages languages"
+    "branding branding navLinks navLinks navLinks navLinks user user";
+}
+
+/* Header */
+.branding,
+.navLinks,
+.languages,
+.user {
+  background-color: #43c0f6;
+}
+
+.branding {
+  grid-area: branding;
+  display: flex;
+  justify-content: center;
+  height: 64px;
+}
+
+.brandLogo {
+  height: 60px;
+  padding-top: 2px;
+}
+
+.navLinks {
+  grid-area: navLinks;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start; /* Align items to the start (top) */
+  height: 64px;
+}
+
+.navButtons {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 0.32px;
+  line-height: 32px;
+  margin-top: 32px; /* Move buttons down 32px */
+  margin-bottom: 5px; /* Adjust paragraph spacing */
+  border: none; /* Remove border */
+  background: none; /* Remove background */
+}
+
+.languages {
+  grid-area: languages;
+  height: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 50%;
+}
+
+.languages p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  color: #ffffff;
+  letter-spacing: 0.22px;
+  margin: 0; /* Remove default margin */
+  line-height: 1; /* Ensure line-height does not add extra space */
+  align-self: flex-end; /* Align text to the bottom */
+  padding-bottom: 12px;
+}
+
+.flag {
+  height: 12px;
+  padding-left: 10px;
+  padding-bottom: 12px;
+}
+
+.user {
+  grid-area: user;
+  height: 32px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 50%;
+}
+
+.profile {
+  height: 26px;
+  padding-bottom: 10px;
+  padding-right: 9px;
+}
+
+.userName {
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 0.32px;
+  line-height: 32px;
+  margin-bottom: 5px; /* Adjust paragraph spacing */
+}
